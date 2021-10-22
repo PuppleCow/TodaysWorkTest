@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/workers_status_border">
+
+    <CheckBox
+        android:id="@+id/workers_status_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+    <TextView
+        android:id="@+id/workers_status_text_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="승인" />
+    <TextView
+        android:id="@+id/workers_status_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름" />
+
+    <TextView
+        android:id="@+id/workers_status_text_phNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="전화번호" />
+
+    <TextView
+        android:id="@+id/workers_status_text_startT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="시작시간" />
+
+    <TextView
+        android:id="@+id/workers_status_text_finishT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="종료시간" />
+
+    <TextView
+        android:id="@+id/workers_status_text_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="관리자" />
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.worker.announcement.AnnouncementActivity">
+
+    <TextView
+        android:id="@+id/manager_announcement_announcement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="공지사항"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/manager_announcement_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="공지제목" />
+
+        <TextView
+            android:id="@+id/manager_announcement_text_must_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:textAlignment="viewEnd"
+            android:textColor="@color/design_default_color_error" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/manager_announcement_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <TextView
+        android:id="@+id/manager_announcement_text_content"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:text="공지내용" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/xmanager_announcement_button_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수정" />
+
+        <Button
+            android:id="@+id/xmanager_announcement_button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="삭제 " />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/xmanager_announcement_button_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="목록" />
+
+    <TextView
+        android:id="@+id/manager_announcement_text_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>

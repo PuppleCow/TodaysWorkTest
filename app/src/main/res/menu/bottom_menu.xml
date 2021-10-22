@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/navbar_announcement"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_campaign_24"
+
+        android:title="공지사항"
+        />
+    <item
+        android:id="@+id/navbar_safty_manual"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_announcement_24"
+        android:title="안전메뉴얼"
+        />
+    <item
+        android:id="@+id/navbar_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_work_24"
+        android:title="작업장(홈)"
+        />
+
+    <item
+        android:id="@+id/navbar_shopping"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_announcement_24"
+        android:title="쇼핑몰"
+        />
+    <item
+        android:id="@+id/navbar_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="설정"
+        />
+</menu>

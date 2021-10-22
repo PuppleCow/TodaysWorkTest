@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/manager_navbar_announcement"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_campaign_24"
+        android:title="공지사항"
+        />
+    <item
+        android:id="@+id/manager_navbar_safety_manual"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_announcement_24"
+        android:title="안전메뉴얼"
+        />
+
+        <item
+            android:id="@+id/manager_navbar_home"
+            android:enabled="true"
+            android:icon="@drawable/ic_baseline_work_24"
+            android:title="긴급알림(홈)"
+            />
+    <item
+        android:id="@+id/manager_navbar_shopping"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_announcement_24"
+        android:title="쇼핑"
+        />
+
+    <item
+        android:id="@+id/manager_navbar_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="설정"
+        />
+</menu>

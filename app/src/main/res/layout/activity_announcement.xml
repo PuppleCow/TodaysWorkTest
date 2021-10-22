@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stroke"
+    android:orientation="vertical"
+    android:textAlignment="inherit"
+    tools:context=".ui.manager.announcement.ManagerAnnouncementActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/announcement_announcement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                android:fontFamily="@font/notosans_bold"
+                android:text="공지사항"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#575756" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/announcement_text_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:text="5/10"
+                    android:textAlignment="textStart" />
+
+                <TextView
+                    android:id="@+id/announcement_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="오늘의 공지사항" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#575756" />
+
+            <ImageView
+                android:id="@+id/announcement_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                tools:srcCompat="@drawable/ic_baseline_crop_original_24" />
+
+            <TextView
+                android:id="@+id/announcement_text_content"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="공지내용" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="#575756" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/announcement_button_edit"
+                    android:layout_width="52dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stroke"
+
+                    android:text="수정"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/announcement_button_delete"
+                    android:layout_width="52dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stroke"
+                    android:text="삭제 "
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/announcement_button_list"
+                    android:layout_width="52dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="220dp"
+                    android:background="@drawable/round"
+                    android:backgroundTint="#422A81"
+                    android:text="목록"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/announcement_text_news"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#E0E0E0"
+            android:elegantTextHeight="false"
+            android:fontFamily="@font/notosans_bold"
+            android:text="최신 안전 뉴스 바로가기"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#575756"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:autoSizeTextType="none" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+    </LinearLayout>
+</LinearLayout>

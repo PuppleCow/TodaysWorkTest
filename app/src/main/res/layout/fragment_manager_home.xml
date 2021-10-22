@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/manager_home_manager_home_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_bold"
+        android:text="홈"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/marnager_home_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/notosans_light"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="9월 2일 목요일"/>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/notosans_light"
+        android:text="오늘도 안전한 하루 되세요"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <Spinner
+        android:id="@+id/manager_home_SelectGroupSp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/transfarent_button"
+        android:popupBackground="@drawable/transfarent_button"
+        android:textAlignment="gravity" />
+
+    <Spinner
+        android:id="@+id/manager_home_electNotifSp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/transfarent_button"
+        android:popupBackground="@drawable/transfarent_button"
+        android:textAlignment="gravity" />
+
+    <EditText
+        android:id="@+id/manager_home_editText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/transfarent_button"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/manager_home_Emergency_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:text="긴급 알림" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/manager_home_workerButton"
+            android:layout_width="134dp"
+            android:layout_height="40dp"
+            android:background="@drawable/transfarent_button"
+            android:fontFamily="@font/notosans_semibold"
+            android:text="근무자 현황"
+            android:textColor="@color/main_color"
+            android:textSize="15dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/manager_home_complaint_list"
+            android:layout_width="134dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round"
+            android:fontFamily="@font/notosans_semibold"
+            android:text="민원목록"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/manager_home_text_news"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#E0E0E0"
+            android:backgroundTint="#E0E0E0"
+            android:fontFamily="@font/notosans_bold"
+            android:paddingTop="15dp"
+            android:text="최신 안전 뉴스 바로가기"
+            android:textAlignment="center"
+            android:textColor="#575756"
+            android:textSize="20dp" />
+    </LinearLayout>
+</LinearLayout>

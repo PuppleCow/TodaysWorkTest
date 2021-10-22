@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".ui.login.RegisterActicity1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/notosans_bold"
+        android:text="회원가입"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="43dp" />
+
+    <TextView
+        android:id="@+id/register_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="이름"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/register_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round"
+        android:fontFamily="@font/notosans_medium"
+
+        android:hint="이름을 입력해주세요"
+        android:paddingStart="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/register_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="주민등록번호"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/register_id_input"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round"
+        android:fontFamily="@font/notosans_medium"
+        android:hint="주민등록번호를 입력해 주세요."
+        android:inputType="number"
+        android:paddingStart="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/register_text_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="근로 형태"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/type2Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="상용직" />
+
+        <Button
+            android:id="@+id/type1Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일용직"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/register_text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="휴대폰 번호"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/round"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/register_cellPhoneNumber_input"
+            android:layout_width="203dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingStart="20dp"
+            android:text="010"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:gravity="center|end"
+            android:orientation="horizontal">
+
+            <android.widget.Button
+                android:id="@+id/register_id_button"
+                android:layout_width="88dp"
+                android:layout_height="24dp"
+
+                android:background="@drawable/transfarent_button"
+                android:fontFamily="@font/notosans_bold"
+                android:text="인증번호 받기"
+                android:textColor="@color/main_color"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/register_cellPhoneNumber_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#ff0000"
+        android:text="휴대전화번호를 정확하게 입력해주세요"
+        />
+
+    <TextView
+        android:id="@+id/register_text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="인증번호"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <EditText
+           android:id="@+id/register_number_input"
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:layout_marginStart="26dp"
+           android:layout_marginEnd="26dp"
+           android:background="@drawable/round"
+           android:fontFamily="@font/notosans_medium"
+           android:hint="인증번호를 입력해주세요."
+           android:inputType="number"
+           android:paddingStart="20dp"
+           android:textColor="@color/white"
+           android:textColorHint="@color/white"
+           android:textSize="12dp" />
+
+        <android.widget.Button
+            android:id="@+id/register_number_button"
+            android:layout_width="88dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="50dp"
+            android:layout_gravity="center|right"
+            android:background="@drawable/transfarent_button"
+            android:fontFamily="@font/notosans_bold"
+            android:text="인증번호 확인"
+            android:textColor="@color/main_color"
+            android:textSize="12dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/register_number_auth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:elevation="8dp"
+            android:background="@drawable/round_primary"
+            android:fontFamily="@font/notosans_medium"
+            android:text="인증완료"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:textColor="@color/white"
+
+            android:textSize="20dp" />
+    </FrameLayout>
+
+<!--    <android.widget.Button-->
+<!--        android:id="@+id/register_id_button"-->
+<!--        android:layout_width="88dp"-->
+<!--        android:layout_height="24dp"-->
+
+<!--        android:background="@drawable/transfarent_button"-->
+<!--        android:fontFamily="@font/notosans_bold"-->
+<!--        android:text="인증번호 받기"-->
+<!--        android:textColor="@color/main_color"-->
+<!--        android:textSize="12dp" />-->
+
+    <TextView
+        android:id="@+id/register_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="26dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text=""
+        android:textColor="#FFA3A3"
+        android:textSize="13dp" />
+
+    <android.widget.Button
+        android:id="@+id/register_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="26dp"
+        android:background="@drawable/transfarent_button"
+        android:backgroundTint="#B3FFFFFF"
+        android:fontFamily="@font/notosans_bold"
+        android:text="다음"
+        android:textColor="@color/main_color" />
+
+</LinearLayout>

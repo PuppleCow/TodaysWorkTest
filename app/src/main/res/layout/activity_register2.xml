@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".ui.login.RegisterActivity2">
+
+
+    <TextView
+        android:id="@+id/register2_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/notosans_bold"
+        android:text="회원가입"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/register2_loginID_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="로그인 아이디"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/register2_loginID"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/round"
+            android:fontFamily="@font/notosans_medium"
+
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="12341234"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/register2_password_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/notosans_medium"
+
+        android:text="비밀번호"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round"
+        >
+
+        <EditText
+            android:id="@+id/register2_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/notosans_medium"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:text="990727"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12dp"
+            app:passwordToggleEnabled="true" />
+
+        <ToggleButton
+            android:id="@+id/register2_toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_baseline_visibility_off_24"
+            android:textOff="."
+            android:textOn="." />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/register2_password_check_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="비밀번호 확인"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round"
+        >
+
+        <EditText
+            android:id="@+id/register2_password_check_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/notosans_medium"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:text="990727"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <ToggleButton
+            android:id="@+id/register2_toggleButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_baseline_visibility_off_24"
+            android:textOff="."
+            android:textOn="." />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/register2_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        />
+
+    <TextView
+        android:id="@+id/register2_message2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="기본 비밀번호는 생년월일 6자리 입니다."
+        android:textColor="#FFA3A3"
+        android:textSize="13dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"></View>
+
+    <CheckBox
+        android:id="@+id/register2_checkBox_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:buttonTint="@color/white"
+        android:fontFamily="@font/notosans_medium"
+        android:text="전체동의"
+        android:textColor="@color/white"
+        android:textSize="13dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/register2_checkBox_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/notosans_medium"
+            android:text="개인정보처리동의(필수)"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/register2_text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/notosans_medium"
+            android:text="@string/underline_약관보기"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/register2_checkBox_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/notosans_medium"
+            android:text="개인정보지속처리동의(권장)"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/register2_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/notosans_medium"
+            android:text="@string/underline_약관보기"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/register2_checkBox_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/notosans_medium"
+            android:text="주민등록번호지속처리동의(권장)"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/register2_text_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/notosans_medium"
+            android:text="@string/underline_약관보기"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/register2_checkBox_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/notosans_medium"
+            android:text="출근 안내등 정보 이용 동의(권장)"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/register2_text_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/notosans_medium"
+            android:text="@string/underline_약관보기"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+<!--    <ScrollView-->
+<!--        android:id="@+id/register2_scrollview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="82dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/register2_text_area"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                />-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
+    <Button
+        android:id="@+id/register2_complete_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="26dp"
+        android:background="@drawable/transfarent_button"
+        android:backgroundTint="#B3FFFFFF"
+        android:fontFamily="@font/notosans_bold"
+        android:text="완료"
+        android:textColor="@color/main_color"
+        android:textSize="15dp" />
+
+</LinearLayout>

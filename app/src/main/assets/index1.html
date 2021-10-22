@@ -1,0 +1,71 @@
+<!-- 연습용 html -->
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="uft-8">
+    <title> 테스트중 </title>
+    <script>
+        function isCheck1(){
+            var is_check1=document.getElementById("check1");
+            if(is_check1.checked==false){
+                alert("필수 항목이 비어있습니다");
+        }
+    }
+        function isCheckAll(){
+            var is_check_all=document.getElementById("checkAll");
+            var check1=document.getElementById("check1");
+            var check2=document.getElementById("check2");
+            var check3=document.getElementById("check3");
+            if(is_check_all.checked==true){
+                check1.checked=true;
+                check2.checked=true;
+                check3.checked=true;
+            }
+        }
+    </script>
+    <style>
+        .textBox{
+        border : 1px solid black;
+        width: 300px;
+        height: 200px;
+        overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <center>
+        <section id="main" class = "mx-auto">
+            <h1>개인정보 처리 동의</h1>
+            <h2>(필수)</h2>
+<!--            <label><input type="checkbox" id ="checkAll" onclick="isCheckAll()" > 전체 동의하기</label><br><br>-->
+<!--            <label><input type="checkbox"  id ="check1" > [필수]약관 1</label><br><br>-->
+            <div class="textBox" >
+<!--            <textarea>asdfasdfadsfdafaasdfasdf<br>asdfadsfasdfasdfasdfasdfasdfasd<br>fasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfdsfaadfasdf<br>asdfsdfsdafsdfsdfsdafsdafsdfsdfsdafasdfsdaf<br>sdafsdfsdfsdafsad</textarea>-->
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim modi in
+                exercitationem explicabo, at rem officia autem non porro soluta dolorum
+                officiis ipsa repellat, laudantium ea unde labore, temporibus quas?Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Eveniet eius totam
+                quam pariatur ratione, in voluptatem dignissimos laboriosam sint aut!
+                Repudiandae consectetur odit quo corrupti quidem perferendis aut dolores
+                quis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nam
+                optio dolore recusandae fuga voluptatibus. Ea quam deserunt consectetur
+                quo aut eligendi, molestiae incidunt molestias ullam? Repellendus ratione
+                repellat
+            </div>
+<!--            <br>-->
+<!--            <label><input type="checkbox"  id ="check2" > 약관 2</label><br><br>-->
+<!--            <textarea>asdfasdfasdfasdfasdfsdafsdaffdsafasfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfsdfasdfasdfasdfasdfsdafsdfasdfsadfdfdsafasdfsdafsdafsadfasdfasdfsadf</textarea>-->
+<!--            <br>-->
+<!--            <label><input type="checkbox"  id ="check3" > 약관 3</label><br><br>-->
+<!--            <textarea>asdfasdfasdfsadfdsafadsfadsfasdfasdfasdfasdfadsfadsfsdfasdfasdfsafasfasdfadsfasdfadsfdsfdssdfasdfadsfaddfasdfasdfsdafasdfasdfsadfsadfsadfsadfasdfsdafsdafsadfsadfsdfasdfasdfgit</textarea>-->
+<!--            <br>-->
+<!--            <br>-->
+<!--            <button type="button" onclick="isCheck1()" >동의하고 계속하기</button>-->
+        </section>
+    </center>
+
+</div>
+</body>
+</html>

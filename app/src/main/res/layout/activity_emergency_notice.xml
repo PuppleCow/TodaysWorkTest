@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EmergencyNoticeActivity">
+
+    <TextView
+        android:id="@+id/emergency_notice_emergency_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/notosans_bold"
+        android:text="긴급알림"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/emergency_notice_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        app:srcCompat="@drawable/emergency_notice" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/notosans_medium"
+        android:gravity="center"
+        android:text="[긴급 알림 사항 전달]"
+        android:textColor="#575756"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/emergency_notice_text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_medium"
+        android:gravity="center"
+        android:text="A 그룹\n모든 작업 일시 중단"
+        android:textColor="#575756"
+        android:textSize="15dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/emergency_notice_button_confirm"
+            android:layout_width="178dp"
+            android:layout_height="50dp"
+
+            android:layout_gravity="center"
+            android:background="@drawable/button_red"
+            android:fontFamily="@font/notosans_semibold"
+            android:gravity="center"
+            android:text="확인"
+            android:textColor="#FCFCFC"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</LinearLayout>

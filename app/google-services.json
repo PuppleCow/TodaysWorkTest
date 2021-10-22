@@ -1,0 +1,88 @@
+{
+  "project_info": {
+    "project_number": "49282523445",
+    "firebase_url": "https://purplecow-application-default-rtdb.firebaseio.com",
+    "project_id": "purplecow-application",
+    "storage_bucket": "purplecow-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49282523445:android:825815182e80760276ec7c",
+        "android_client_info": {
+          "package_name": "com.pupplecow.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49282523445-089jn82dl3fk9lbje8if319a3h9pc2lm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pupplecow.myapplication",
+            "certificate_hash": "b6b4d594de70099d1456fd6f57e246555b1372fe"
+          }
+        },
+        {
+          "client_id": "49282523445-2rrps4anop8naauano5afdo0ebsi4c37.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pupplecow.myapplication",
+            "certificate_hash": "daa44e9392afefb95a4086b54da6c9d5ba49807e"
+          }
+        },
+        {
+          "client_id": "49282523445-3449psbcro1k182kk40m6b0q1bhlegn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pupplecow.myapplication",
+            "certificate_hash": "9e1788c57c3f94d0373ee247385456ed3ee2fa87"
+          }
+        },
+        {
+          "client_id": "49282523445-e38cs7bfo23u7h9ibroe89180t4m7nj2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pupplecow.myapplication",
+            "certificate_hash": "7f89bc79f8eb75fb41078801d875f4ff743fa4d0"
+          }
+        },
+        {
+          "client_id": "49282523445-ro4r36pogeattsi5np3okmmc4tjqv8kn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pupplecow.myapplication",
+            "certificate_hash": "d90a2ba1939bd79efdef82a713aa936003ace848"
+          }
+        },
+        {
+          "client_id": "49282523445-t74cr0mmsbu41dps6o71lj2fa12fhsfk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pupplecow.myapplication",
+            "certificate_hash": "22da3b446a85972f8a90fc3bb39fa3d02b4fdc11"
+          }
+        },
+        {
+          "client_id": "49282523445-6l7lrih8dja4s7i4u4i9bhlftsm8g7qs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO8C39om0tIxQmfLJ_96goT4uRcrc_w6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49282523445-6l7lrih8dja4s7i4u4i9bhlftsm8g7qs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

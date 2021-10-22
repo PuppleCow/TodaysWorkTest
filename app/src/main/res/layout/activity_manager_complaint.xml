@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.manager.home.Complaint.ManagerComplaintActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/manager_MyComplaint_MyComplaint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/notosans_bold"
+                android:text="내 민원"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"></View>
+
+            <TextView
+                android:id="@+id/manager_MyComplaint_text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/notosans_bold"
+                android:text="민원제목"
+                android:textColor="#575756" />
+
+            <TextView
+                android:id="@+id/manager_MyComplaint_text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/notosans_medium"
+                android:text="민원날짜"
+                android:textColor="#575756" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"></View>
+
+            <ImageView
+                android:id="@+id/manager_MyComplaint_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
+                tools:src="@drawable/ic_baseline_crop_original_24" />
+
+            <TextView
+                android:id="@+id/manager_MyComplaint_text_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/notosans_medium"
+                android:text="민원내용"
+                android:textColor="#575756" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="0"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/manager_MyComplaint_button_list"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_422a81"
+                    android:text="목록"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/manager_MyComplaint_text_news"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="TextView" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/manager_Mycomplaint_text_news"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#E0E0E0"
+            android:backgroundTint="#E0E0E0"
+            android:fontFamily="@font/notosans_bold"
+            android:paddingTop="15dp"
+            android:text="최신 안전 뉴스 바로가기"
+            android:textAlignment="center"
+            android:textColor="#575756"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

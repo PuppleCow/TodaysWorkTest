@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pupplecow.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 갤러리 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 갤러리 권한 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true">
+        <service
+            android:name=".service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/emergency_notice" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/teal_200" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+
+        <activity android:name=".ui.worker.settings.SettingEmergencyInformationChangeActivity"></activity>
+        <activity android:name=".ui.worker.settings.SettingMyInformationSettingChangeActivity" />
+        <activity android:name=".ui.manager.home.Complaint.ManagerComplaintListActivity" />
+        <activity android:name=".ui.worker.home.complaint.ComplaintListActivity" />
+        <activity android:name=".ui.manager.home.Complaint.ManagerComplaintActivity" />
+        <activity android:name=".ui.manager.announcement.ManagerCreateAnnouncementActivity" />
+        <activity android:name=".ui.manager.announcement.ManagerAnnouncementActivity" />
+        <activity android:name="MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.manager.home.ManagerWorkerInfoActivity" />
+        <activity android:name=".ui.manager.settings.ManagerResettingPassword1" />
+        <activity android:name=".ui.manager.settings.ManagerResettingPassword2" />
+        <activity android:name=".ui.worker.home.ConfirmWaitingActivity" />
+        <activity android:name=".ManagerNavActivity" />
+        <activity android:name=".ui.worker.settings.SettingMyInformationSettingActivity" />
+        <activity android:name=".ui.worker.settings.SettingOpenSourceLicense" />
+        <activity android:name=".ui.worker.settings.SettingTermsAndPolicy" />
+        <activity android:name=".ui.worker.settings.SettingCheckSafetyManual" />
+        <activity android:name=".ui.worker.settings.SettingEmergencyInformationActivity" />
+        <activity android:name=".MainNavActivity" />
+        <activity android:name=".ui.login.ResettingPassword2" />
+        <activity android:name=".ui.login.ResettingPassword1" />
+<!-- <activity android:name=".Setting" /> -->
+        <activity android:name=".ui.worker.announcement.AnnouncementWorkerActivity" />
+        <activity android:name=".EmergencyNoticeActivity" />
+
+        <activity android:name=".ui.worker.home.complaint.ComplaintActivity" />
+        <activity android:name=".ui.worker.home.complaint.WriteComplaintActivity" />
+        <activity android:name=".ui.worker.home.SafetyManualQuizActivity3" />
+        <activity android:name=".ui.login.CheckInActivity" />
+        <activity android:name=".ui.login.LoginActivity" />
+
+        <activity android:name=".ui.worker.home.SafetyManualQuizActivity2" />
+        <activity android:name=".ui.worker.home.SafetyManualQuizActivity1" />
+        <activity android:name=".ui.worker.home.SafetyManualQuizWebViewActivity1" />
+        <activity android:name=".ui.login.RegisterActivity2" />
+        <activity android:name=".ui.login.RegisterActicity1" />
+<!--        <activity android:name=".MainActivity">-->
+
+<!--        </activity>-->
+    </application>
+
+</manifest>

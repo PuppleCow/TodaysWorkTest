@@ -2,15 +2,13 @@ package com.pupplecow.myapplication.ui.worker.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.pupplecow.myapplication.R
 import com.pupplecow.myapplication.databinding.ActivityConfirmWaitingBinding
-import kotlinx.android.synthetic.main.activity_confirm_waiting.*
+
 
 class ConfirmWaitingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityConfirmWaitingBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_confirm_waiting)
 
         binding= ActivityConfirmWaitingBinding.inflate(layoutInflater)
         setContentView(binding.root)

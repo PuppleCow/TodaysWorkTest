@@ -9,58 +9,25 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
-import com.bumptech.glide.Glide
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.toObject
-import com.google.firebase.ktx.Firebase
-import com.pupplecow.myapplication.api.FirebaseApi
-import com.pupplecow.myapplication.data.Complaint
+
 import com.pupplecow.myapplication.data.UserData
 import com.pupplecow.myapplication.databinding.ActivitySettingMyInformationSettingChangeBinding
-import kotlinx.android.synthetic.main.activity_complaint.*
+
 import java.util.*
 
 class SettingMyInformationSettingChangeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySettingMyInformationSettingChangeBinding
 
-    private var fbFirestore: FirebaseFirestore? = null
-    private var photoUri: Uri? = null
-
-    var userData: UserData? = null
-    var auth = Firebase.auth
-
-    val permission_list = arrayOf(
-        Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.ACCESS_MEDIA_LOCATION
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingMyInformationSettingChangeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        fbFirestore = FirebaseFirestore.getInstance()
-
-        //파이어스토어 파이어베이스
-        auth = FirebaseAuth.getInstance()
 
 
-        //유저 데이터 가져오기
-        auth.uid?.let {
-            FirebaseApi().getUserData(it) { isSuccess, message, data ->
-                Log.e("UserData", "$isSuccess $message $data")
-                if (isSuccess) {
-                    userData = data
-                }
-            }
-        }
 
-
-        @Suppress("DEPRECATION")
-        requestPermissions(permission_list, 0)
 
         //사진첨부버튼
         binding.setting2ChangeImage.setOnClickListener {
@@ -121,28 +88,7 @@ class SettingMyInformationSettingChangeActivity : AppCompatActivity() {
 
                             DialogInterface.BUTTON_POSITIVE -> {
 
-                                val washingtonRef =
-                                    fbFirestore!!.collection("USER").document(auth.uid!!)
-                                washingtonRef
-                                    .update(
-                                        mapOf(
-                                            "phoneNumber" to binding.setting2ChangeWritePhone.text.toString(),
-                                            "photoUrl" to photoUri.toString()
-                                        )
-                                    )
-                                    .addOnSuccessListener {
-                                        Log.d(
-                                            "개인정보 업데이트 성공",
-                                            "DocumentSnapshot successfully updated!"
-                                        )
-                                    }
-                                    .addOnFailureListener { e ->
-                                        Log.e(
-                                            "개인정보 업데이트 실패",
-                                            "Error updating document",
-                                            e
-                                        )
-                                    }
+
                                 setResult(RESULT_OK)
                                 finish()
                             }
@@ -158,18 +104,4 @@ class SettingMyInformationSettingChangeActivity : AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        @Suppress("DEPRECATION")
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (resultCode == AppCompatActivity.RESULT_OK) {
-            // 선택한 이미지의 경로 데이터를 관리하는 Uri 객체를 추출한다.
-            photoUri = data?.data
-
-            if (photoUri != null) {
-                Glide.with(this).load(photoUri).into(binding.setting2ChangeImage)
-
-            }
-        }
-    }
 }

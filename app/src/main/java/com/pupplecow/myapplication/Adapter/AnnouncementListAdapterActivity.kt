@@ -7,33 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.firestore.FirebaseFirestore
 import com.pupplecow.myapplication.R
 import com.pupplecow.myapplication.ui.manager.announcement.AnnouncementData
-import kotlinx.android.synthetic.main.activity_frameofannouncementlist.view.*
+
 import kotlin.collections.ArrayList
 
 class AnnouncementListAdapterActivity(val context:Context, val itemClick: (AnnouncementData) -> Unit):
     RecyclerView.Adapter<AnnouncementListAdapterActivity.Holder>() {
     var announcement: ArrayList<AnnouncementData> = arrayListOf()
-    var firestore : FirebaseFirestore? = FirebaseFirestore.getInstance()
-
-    init {
-        firestore?.collection("announcement")
-            ?.addSnapshotListener { querySnapshot, firebaseFireStore ->
-
-                // ArrayList 비워줌
-                announcement.clear()
 
 
-                for (snapshot in querySnapshot!!.documents) {
-                    var item = snapshot.toObject(AnnouncementData::class.java)
-                    announcement.add(item!!)
-                }
-                notifyDataSetChanged()   //새로고침되도록
-            }
-        //
-    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
 
@@ -48,9 +32,6 @@ class AnnouncementListAdapterActivity(val context:Context, val itemClick: (Annou
     override fun onBindViewHolder(holder: Holder, position: Int) {
         //holder?.bind(announcementList[position], context)
         var viewHolder = holder.itemView
-        viewHolder.frameofannouncementlist_number.text=announcement[position].number
-        viewHolder.frameofannouncementlist_category.text="["+announcement[position].category+"]"+announcement[position].title
-        viewHolder.frameofannouncementlist_date.text=announcement[position].month+"/"+announcement[position].date
 
 
         holder?.itemView.setOnClickListener{

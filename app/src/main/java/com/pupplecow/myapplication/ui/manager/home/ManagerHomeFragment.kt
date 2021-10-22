@@ -17,8 +17,6 @@ import com.pupplecow.myapplication.databinding.FragmentManagerHomeBinding
 import com.pupplecow.myapplication.ui.manager.announcement.ManagerAnnouncementListFragment
 import com.pupplecow.myapplication.ui.manager.home.Complaint.ManagerComplaintListActivity
 
-import kotlinx.android.synthetic.main.fragment_manager_home.*
-
 
 class ManagerHomeFragment:Fragment() {
 

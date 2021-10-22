@@ -7,12 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import com.pupplecow.myapplication.R
 import com.pupplecow.myapplication.data.Complaint
-import kotlinx.android.synthetic.main.manager_complaint_list_item.view.*
+
 
 
 //class ManagerComplaintListAdapter(val context: Context,val complaint:ArrayList<ManagerComplaint>, val itemClick: (ManagerComplaint) -> Unit):
@@ -72,8 +69,6 @@ class ComplaintListAdapter(val context: Context, val itemClick: (Complaint) -> U
 //        holder?.bind(complaintList[position], context)
         var viewHolder= holder.itemView
 
-        viewHolder.manager_complaint_list_title.text="["+complaintList[position].category+"]"+complaintList[position]. title
-        viewHolder.manager_complaint_list_number.text=complaintList[position].month+"/"+complaintList[position].date
 
         holder?.itemView.setOnClickListener {
             itemClick(complaintList[position])

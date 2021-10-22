@@ -4,13 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.pupplecow.myapplication.R
 import com.pupplecow.myapplication.databinding.ActivityManagerNavBinding
 import com.pupplecow.myapplication.ui.manager.announcement.ManagerAnnouncementListFragment
 import com.pupplecow.myapplication.ui.manager.home.ManagerHomeFragment
 import com.pupplecow.myapplication.ui.manager.settings.ManagerSettingFragment
 import com.pupplecow.myapplication.ui.shopping.ShoppingFragment
-import kotlinx.android.synthetic.main.activity_manager_nav.*
 
 
 
@@ -28,7 +26,6 @@ class ManagerNavActivity : AppCompatActivity(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_manager_nav)
         binding = ActivityManagerNavBinding.inflate(layoutInflater)
 
         setContentView(binding.root)

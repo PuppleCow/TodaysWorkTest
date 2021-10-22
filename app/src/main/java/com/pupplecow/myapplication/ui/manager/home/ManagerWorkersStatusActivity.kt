@@ -7,9 +7,8 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.pupplecow.myapplication.R
 import com.pupplecow.myapplication.databinding.ActivityManagerWorkersStatusBinding
-import kotlinx.android.synthetic.main.activity_manager_workers_status.*
+
 
 class ManagerWorkersStatusActivity : AppCompatActivity() {
     private lateinit var binding: ActivityManagerWorkersStatusBinding
@@ -185,7 +184,7 @@ class ManagerWorkersStatusActivity : AppCompatActivity() {
 //        }
 
         //승인하기 버튼
-        workers_status_button_confirm.setOnClickListener {
+        binding.workersStatusButtonConfirm.setOnClickListener {
 
             //체크 되어있는 근무자 미승인->승인으로 바꾸기
         }

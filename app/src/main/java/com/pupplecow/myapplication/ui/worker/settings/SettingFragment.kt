@@ -7,24 +7,15 @@ import android.graphics.ImageDecoder
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.toObject
-import com.google.firebase.ktx.Firebase
-import com.pupplecow.myapplication.data.UserData
 import com.pupplecow.myapplication.databinding.FragmentSettingBinding
 
 class SettingFragment:Fragment() {
 
-
-    private var fbFirestore: FirebaseFirestore?=null
-    var auth = Firebase.auth
 
     private var _binding:FragmentSettingBinding?=null
     private val binding get() = _binding!!
@@ -57,29 +48,7 @@ class SettingFragment:Fragment() {
 
 
         //이름,사진 가져오기
-        // 파이어스토어에서 데이터 가져오기
-        val docRef = fbFirestore?.collection("USER")?.document(auth.uid.toString())
-        docRef?.get()
-            ?.addOnSuccessListener { document ->
-                if (document != null) {
-                    //val userData=document.data
-                    Log.e("개인정보 가져오기 성공", "DocumentSnapshot data: ${document.data}")
 
-                    // 개인정보 가져오기 성공했을 때
-                    docRef?.get().addOnSuccessListener { documentSnapshot ->
-                        val information = documentSnapshot.toObject<UserData>()
-
-                        // 이름 가져오기
-                        binding.fragmentSetting1TextView2.text=information?.name+"님"
-                    }
-
-                } else {
-                    Log.d("개인정보 등록 안 되어 있음", "No such document")
-                }
-            }
-            ?.addOnFailureListener { exception ->
-                Log.e("개인정보 가져오기 실패", "get failed with ", exception)
-            }
 
 
 

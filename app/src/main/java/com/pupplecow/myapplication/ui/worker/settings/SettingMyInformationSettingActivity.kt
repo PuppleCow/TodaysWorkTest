@@ -3,27 +3,12 @@ package com.pupplecow.myapplication.ui.worker.settings
 import android.Manifest
 import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.BitmapFactory
-import android.graphics.ImageDecoder
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.auth.FirebaseAuth
-import android.provider.MediaStore
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.pupplecow.myapplication.databinding.ActivitySettingMyInformationSettingBinding
-import com.pupplecow.myapplication.ui.login.ResettingPassword1
-import androidx.core.view.isVisible
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.toObject
-import com.google.firebase.ktx.Firebase
-import com.pupplecow.myapplication.data.Complaint
-import com.pupplecow.myapplication.data.UserData
 import com.pupplecow.myapplication.ui.login.LoginActivity
-import kotlinx.android.synthetic.main.fragment_manager_create_announecement.*
+
 
 
 // 메인 네비바의 SettingFragment에서 '내 정보 설정' 클릭 시 이동하게 된 액티비티
@@ -32,8 +17,7 @@ import kotlinx.android.synthetic.main.fragment_manager_create_announecement.*
 class SettingMyInformationSettingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySettingMyInformationSettingBinding
-    private var fbFirestore: FirebaseFirestore?=null
-    var auth = Firebase.auth
+
 
     // 사진을 가져오기 위한 권한을 확인하는 코드
     val permission_list = arrayOf(
@@ -46,48 +30,11 @@ class SettingMyInformationSettingActivity : AppCompatActivity() {
         binding = ActivitySettingMyInformationSettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        fbFirestore= FirebaseFirestore.getInstance()
-
         // 수정 버튼 누르면 이동하기
         binding.setting2Change.setOnClickListener {
             val intent=Intent(this,SettingMyInformationSettingChangeActivity::class.java)
             startActivity(intent)
         }
-
-
-        // 파이어스토어에서 데이터 가져오기
-        val docRef = fbFirestore?.collection("USER")?.document(auth.uid.toString())
-        docRef?.get()
-            ?.addOnSuccessListener { document ->
-                if (document != null) {
-                    //val userData=document.data
-                    Log.e("개인정보 가져오기 성공", "DocumentSnapshot data: ${document.data}")
-
-                    // 개인정보 가져오기 성공했을 때
-                    docRef?.get().addOnSuccessListener { documentSnapshot ->
-                        val information = documentSnapshot.toObject<UserData>()
-
-                        // 이름 가져오기
-                        binding.setting2MyName.text=information?.name
-                        //binding.setting2MyName.text = "aaa"
-
-                         // 전화번호 가져오기 010-1234-5678
-                        var tempPhoneNum=information?.phoneNumber
-                        binding.setting2MyPhone.text=tempPhoneNum
-
-
-                        // 생년월일 가져오기 예) 1968년 1월 12일
-                        var tempBirth=information?.birthDate
-                        binding.setting2MyBirth.text=tempBirth
-                    }
-
-                } else {
-                    Log.d("개인정보 등록 안 되어 있음", "No such document")
-                }
-            }
-            ?.addOnFailureListener { exception ->
-                Log.e("개인정보 가져오기 실패", "get failed with ", exception)
-            }
 
 
 //        // 이름 가져오기

@@ -3,24 +3,17 @@ package com.pupplecow.myapplication.ui.login
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
-import android.view.View
 import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.pupplecow.myapplication.R
-import com.pupplecow.myapplication.databinding.ActivityLoginBinding
 import com.pupplecow.myapplication.databinding.ActivityRegister2Binding
-import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_register1.*
-import kotlinx.android.synthetic.main.activity_register2.*
 
 class RegisterActivity2 : AppCompatActivity() {
-
     private lateinit var binding:ActivityRegister2Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register2)
         binding= ActivityRegister2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -35,12 +28,12 @@ class RegisterActivity2 : AppCompatActivity() {
 
         //로그인아이디 자동으로 입력
         val loginID=userCellPhoneNumber?.substring(4,11)
-        register2_loginID.text=loginID
+        binding.register2LoginID.text=loginID
 
         //비밀번호 자동으로 입력
         val loginPW=userId?.substring(0,6)
-        register2_password_input.setText(loginPW)
-        register2_password_check_input.setText(loginPW)
+        binding.register2PasswordInput.setText(loginPW)
+        binding.register2PasswordCheckInput.setText(loginPW)
 
 
 
@@ -91,44 +84,44 @@ class RegisterActivity2 : AppCompatActivity() {
         }
 
         //약관 클릭
-        register2_text_1.setOnClickListener {
+        binding.register2Text1.setOnClickListener {
 
         }
-        register2_text_2.setOnClickListener {
+        binding.register2Text2.setOnClickListener {
 
         }
-        register2_text_3.setOnClickListener {
+        binding.register2Text3.setOnClickListener {
 
         }
-        register2_text_4.setOnClickListener {
+        binding.register2Text4.setOnClickListener {
 
         }
 
 
         //체크상태파악
         //전체동의했을때 모두 체크
-        register2_checkBox_all.setOnClickListener {onCheckChanged(register2_checkBox_all)}
-        register2_checkBox_1.setOnClickListener {onCheckChanged(register2_checkBox_1)}
-        register2_checkBox_2.setOnClickListener {onCheckChanged(register2_checkBox_2)}
-        register2_checkBox_3.setOnClickListener {onCheckChanged(register2_checkBox_3)}
-        register2_checkBox_4.setOnClickListener {onCheckChanged(register2_checkBox_4)}
+        binding.register2CheckBoxAll.setOnClickListener {onCheckChanged(binding.register2CheckBoxAll)}
+        binding.register2CheckBox1.setOnClickListener {onCheckChanged(binding.register2CheckBox1)}
+        binding.register2CheckBox2.setOnClickListener {onCheckChanged(binding.register2CheckBox2)}
+        binding.register2CheckBox3.setOnClickListener {onCheckChanged(binding.register2CheckBox3)}
+        binding.register2CheckBox4.setOnClickListener {onCheckChanged(binding.register2CheckBox4)}
 
 
 
         //회원가입 완료버튼 눌렀을때
-        register2_complete_button.setOnClickListener {
+        binding.register2CompleteButton.setOnClickListener {
             //비밀번호 서로 같은지 확인하기
-            val userPassword=register2_password_input.text.toString()
-            val userPasswordCheck=register2_password_check_input.text.toString()
+            val userPassword=binding.register2PasswordInput.text.toString()
+            val userPasswordCheck=binding.register2PasswordCheckInput.text.toString()
 
             if(userPassword==userPasswordCheck){
                 //비밀번호 같을때
 
                 //전체동의했는지 체크하기
-                if(register2_checkBox_1.isChecked
-                    && register2_checkBox_2.isChecked
-                    && register2_checkBox_3.isChecked
-                    && register2_checkBox_4.isChecked){
+                if(binding.register2CheckBox1.isChecked
+                    && binding.register2CheckBox2.isChecked
+                    && binding.register2CheckBox3.isChecked
+                    && binding.register2CheckBox4.isChecked){
                     // 비밀번호 저장하기
 
                     //"정상적으로 회원가입되었습니다." 토스트 알림 띄우기
@@ -152,7 +145,7 @@ class RegisterActivity2 : AppCompatActivity() {
 
             }
             else{// 비밀번호 다를때
-                register2_message.text="비밀번호가 맞지 않습니다."
+                //binding.register2Messagetext="비밀번호가 맞지 않습니다."
             }
 
         }
@@ -162,24 +155,24 @@ class RegisterActivity2 : AppCompatActivity() {
     fun onCheckChanged(compoundButton: CompoundButton) {
         when(compoundButton.id) {
             R.id.register2_checkBox_all -> {
-                if (register2_checkBox_all.isChecked) {
-                    register2_checkBox_1.isChecked = true
-                    register2_checkBox_2.isChecked = true
-                    register2_checkBox_3.isChecked = true
-                    register2_checkBox_4.isChecked = true
+                if (binding.register2CheckBoxAll.isChecked) {
+                    binding.register2CheckBox1.isChecked = true
+                    binding.register2CheckBox2.isChecked = true
+                    binding.register2CheckBox3.isChecked = true
+                    binding.register2CheckBox4.isChecked = true
                 }else {
-                    register2_checkBox_1.isChecked = false
-                    register2_checkBox_2.isChecked = false
-                    register2_checkBox_3.isChecked = false
-                    register2_checkBox_4.isChecked = false
+                    binding.register2CheckBox1.isChecked = false
+                    binding.register2CheckBox2.isChecked = false
+                    binding.register2CheckBox3.isChecked = false
+                    binding.register2CheckBox4.isChecked = false
                 }
             }
             else -> {
-                register2_checkBox_all.isChecked = (
-                        register2_checkBox_1.isChecked
-                                && register2_checkBox_2.isChecked
-                                && register2_checkBox_3.isChecked
-                                && register2_checkBox_4.isChecked)
+                binding.register2CheckBoxAll.isChecked = (
+                        binding.register2CheckBox1.isChecked
+                                && binding.register2CheckBox2.isChecked
+                                && binding.register2CheckBox3.isChecked
+                                && binding.register2CheckBox4.isChecked)
             }
         }
 

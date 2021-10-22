@@ -2,17 +2,14 @@ package com.pupplecow.myapplication.ui.manager.home.Complaint
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.pupplecow.myapplication.R
 import com.pupplecow.myapplication.databinding.ActivityManagerComplaintBinding
-import com.pupplecow.myapplication.databinding.ActivityRegister2Binding
-import kotlinx.android.synthetic.main.activity_manager_complaint.*
+
 
 
 class ManagerComplaintActivity : AppCompatActivity() {
     private lateinit var binding:ActivityManagerComplaintBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_manager_complaint)
         binding= ActivityManagerComplaintBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
